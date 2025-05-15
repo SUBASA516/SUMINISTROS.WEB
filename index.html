@@ -1,1 +1,71 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Suministros de Básicos SA de CV</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png"/>
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <h1>Suministros de Básicos SA de CV</h1>
+            <p>Comprometidos con el abastecimiento de calidad</p>
+        </div>
+    </header>
+
+    <section class="about">
+        <h2>Misión</h2>
+        <p>Proveer productos básicos de alta calidad a nuestros clientes a lo largo del país, garantizando eficiencia en la entrega, precios competitivos y un compromiso constante con la mejora continua.</p>
+        <h2>Visión</h2>
+        <p>Ser la empresa líder en distribución de productos esenciales en México, reconocida por su confiabilidad, alcance nacional y atención al cliente personalizada.</p>
+        <h2>Valores</h2>
+        <ul>
+            <li><strong>Compromiso:</strong> Entregar siempre lo mejor.</li>
+            <li><strong>Responsabilidad:</strong> Cumplimos lo que prometemos.</li>
+            <li><strong>Honestidad:</strong> Negocios transparentes con nuestros socios y clientes.</li>
+            <li><strong>Calidad:</strong> Solo productos confiables y certificados.</li>
+        </ul>
+    </section>
+
+    <section class="coverage">
+        <h2>Cobertura Nacional</h2>
+        <p>Contamos con cobertura en casi toda la República Mexicana.</p>
+        <img src="mapa-mexico.png" alt="Mapa de México con cobertura" />
+    </section>
+
+    <section class="contact">
+        <h2>Contacto</h2>
+        <form onsubmit="return validateForm()" action="https://api.whatsapp.com/send?phone=527774980281" method="get" target="_blank">
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            <input type="email" id="correo" name="correo" placeholder="Tu correo" required />
+            <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar por WhatsApp</button>
+        </form>
+        <div class="social-icons">
+            <a href="https://wa.me/527774980281" target="_blank"><img src="wa.png" alt="WhatsApp"></a>
+            <a href="https://instagram.com/suministrosdebasicos" target="_blank"><img src="ig.png" alt="Instagram"></a>
+            <a href="mailto:suministrosdebasicos@gmail.com"><img src="mail.png" alt="Correo"></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Suministros de Básicos SA de CV</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            const nombre = document.getElementById('nombre').value.trim();
+            const correo = document.getElementById('correo').value.trim();
+            const mensaje = document.getElementById('mensaje').value.trim();
+            if (!nombre || !correo || !mensaje) {
+                alert("Por favor completa todos los campos.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
